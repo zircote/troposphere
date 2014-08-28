@@ -77,12 +77,13 @@ class Init(AWSHelperFn):
         self.data = {"AWS::CloudFormation::Init": data}
 
     def validate(self, data):
-        if 'config' not in data:
-            raise ValueError('config property is required')
-        if not isinstance(data['config'], InitConfig):
-            raise ValueError(
-                'config property must be of type autoscaling.InitConfig'
-            )
+        # if 'config' not in data:
+        #     raise ValueError('config property is required')
+        # if not isinstance(data['config'], InitConfig):
+        #     raise ValueError(
+        #         'config property must be of type autoscaling.InitConfig'
+        #     )
+        pass
 
     def JSONrepr(self):
         return self.data
